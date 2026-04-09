@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Playybook — Track. Coach. Dominate.</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#a2c9ff",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed": "#ffdbd1",
+              "background": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "outline": "#8a919e",
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary-container": "#3c2500",
+              "primary": "#a2c9ff",
+              "on-error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#004881",
+              "tertiary-fixed-dim": "#ffb954",
+              "on-background": "#e5e2e1",
+              "on-secondary-container": "#fff7f5",
+              "error": "#ffb4ab",
+              "tertiary-container": "#c3841b",
+              "on-error": "#690005",
+              "on-tertiary": "#452b00",
+              "secondary": "#ffb5a0",
+              "surface-dim": "#131313",
+              "on-tertiary-fixed-variant": "#633f00",
+              "surface": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "secondary-container": "#d33a01",
+              "primary-container": "#3394f1",
+              "on-primary-container": "#002b50",
+              "on-surface-variant": "#c0c7d4",
+              "secondary-fixed-dim": "#ffb5a0",
+              "on-primary-fixed": "#001c38",
+              "on-secondary": "#5f1500",
+              "surface-bright": "#393939",
+              "inverse-on-surface": "#313030",
+              "surface-container": "#201f1f",
+              "on-secondary-fixed": "#3b0900",
+              "on-tertiary-fixed": "#291800",
+              "inverse-primary": "#0060a8",
+              "tertiary-fixed": "#ffddb4",
+              "surface-container-low": "#1c1b1b",
+              "surface-variant": "#353534",
+              "surface-tint": "#a2c9ff",
+              "error-container": "#93000a",
+              "outline-variant": "#404752",
+              "surface-container-highest": "#353534",
+              "tertiary": "#ffb954",
+              "on-surface": "#e5e2e1",
+              "on-secondary-fixed-variant": "#872100",
+              "on-primary": "#00315b"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              "ambient": "0 32px 64px -12px rgba(229, 226, 225, 0.06)",
+              "ambient-lg": "0 40px 80px -16px rgba(229, 226, 225, 0.08)",
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .hero-mesh {
+            background-image: radial-gradient(at 0% 0%, hsla(214,100%,82%,0.15) 0, transparent 50%),
+                              radial-gradient(at 100% 100%, hsla(12,100%,81%,0.1) 0, transparent 50%);
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-container">
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
+<div class="flex flex-col max-w-7xl mx-auto px-4 sm:px-8">
+<div class="flex justify-between items-center w-full py-4 gap-4">
+<a href="#" class="text-2xl font-black tracking-tighter text-on-surface font-headline shrink-0">Playybook</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-bold font-body text-sm transition-colors" href="#features">Features</a>
+<a class="text-on-surface/70 hover:text-primary hover:opacity-100 transition-all font-body text-sm" href="#how-it-works">How It Works</a>
+<a class="text-on-surface/70 hover:text-primary hover:opacity-100 transition-all font-body text-sm" href="#app-preview">App Preview</a>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button type="button" id="nav-toggle" class="md:hidden flex items-center justify-center size-10 rounded-xl text-on-surface hover:bg-surface-container-high transition-colors" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+<span class="material-symbols-outlined text-2xl" id="nav-toggle-icon">menu</span>
+</button>
+<button type="button" class="bg-secondary text-on-secondary px-5 py-2 rounded-xl font-bold font-headline text-sm active:scale-95 duration-200 transition-transform">
+                Get Started
+            </button>
+</div>
+</div>
+<div id="mobile-nav" class="hidden md:hidden flex-col gap-3 pb-4 pt-2 border-0">
+<a class="text-primary font-bold font-body text-sm py-2" href="#features">Features</a>
+<a class="text-on-surface/80 font-body text-sm py-2" href="#how-it-works">How It Works</a>
+<a class="text-on-surface/80 font-body text-sm py-2" href="#app-preview">App Preview</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="relative min-h-[921px] flex flex-col items-center justify-center px-4 sm:px-8 overflow-hidden hero-mesh">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-w-0 w-full">
+<div class="space-y-8 text-center lg:text-left">
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-background">
+                        Track.<br/>Coach.<br/><span class="bg-gradient-to-br from-secondary to-tertiary bg-clip-text text-transparent">Dominate.</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mx-auto lg:mx-0 font-body leading-relaxed opacity-80">
+                        Streamlined basketball scoring, scheduling, and team management for coaches and players. Elevate your game with data-driven strategy.
+                    </p>
+<div class="flex justify-center lg:justify-start">
+<button type="button" class="px-10 py-5 rounded-xl font-headline font-bold text-lg bg-secondary text-on-secondary shadow-ambient-lg transition-transform hover:-translate-y-1 active:scale-95">
+                            Get Started
+                        </button>
+</div>
+</div>
+<div class="relative w-full min-w-0 max-w-full flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/10 blur-[120px] rounded-full"></div>
+<img alt="PLAYYBOOK app dashboard — Coach's Tools, My Teams, and Upcoming Events" class="relative z-10 w-full max-w-[min(500px,100%)] max-h-[80vh] h-auto rounded-[3rem] shadow-ambient-lg object-contain" src="assets/hero-dashboard.png" width="467" height="1024"/>
+</div>
+</div>
+</section>
+<section id="features" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto scroll-mt-24">
+<div class="mb-16">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-on-surface">Pro-Level Tools.</h2>
+<p class="text-primary font-body font-semibold uppercase tracking-widest text-sm">Built for the modern court</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-low p-10 rounded-3xl relative overflow-hidden group shadow-ambient">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="sports_basketball">sports_basketball</span>
+<h3 class="font-headline text-3xl font-bold mb-4 text-on-surface">Game Scoring</h3>
+<p class="text-on-surface-variant max-w-md">GameChanger-style real-time tracking. Capture every bucket, board, and dime with a single tap.</p>
+</div>
+</div>
+<div class="absolute -right-10 bottom-0 w-2/3 h-1/2 bg-surface-container-highest rounded-tl-3xl opacity-50 transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-ambient">
+<img alt="" class="w-full h-full object-cover rounded-tl-3xl opacity-40" src="assets/landing-reference.png"/>
+</div>
+</div>
+<div class="bg-surface-container-high p-10 rounded-3xl shadow-ambient">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="draw">draw</span>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Animated Playbook (Coming Soon)</h3>
+<p class="text-on-surface-variant text-sm">Draw, save, and animate plays. Your whiteboard, now in 60 FPS.</p>
+</div>
+<div class="bg-surface-container-high p-10 rounded-3xl shadow-ambient">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="calendar_today">calendar_today</span>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Team Scheduling</h3>
+<p class="text-on-surface-variant text-sm">Sync practices, games, and travel. Keep the whole roster on time.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-low p-10 rounded-3xl flex flex-col md:flex-row items-center gap-10 shadow-ambient">
+<div class="flex-1">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6" data-icon="insights">insights</span>
+<h3 class="font-headline text-3xl font-bold mb-4 text-on-surface">Player Stats &amp; Analytics</h3>
+<p class="text-on-surface-variant">Deep dive into shot charts, efficiency ratings, and performance trends over the season.</p>
+</div>
+<div class="flex gap-2">
+<div class="w-16 h-32 bg-primary/20 rounded-full flex items-end justify-center p-2"><div class="w-full h-[80%] bg-primary rounded-full"></div></div>
+<div class="w-16 h-32 bg-primary/20 rounded-full flex items-end justify-center p-2"><div class="w-full h-[60%] bg-primary rounded-full"></div></div>
+<div class="w-16 h-32 bg-primary/20 rounded-full flex items-end justify-center p-2"><div class="w-full h-[95%] bg-primary rounded-full"></div></div>
+</div>
+</div>
+</div>
+</section>
+<section id="app-preview" class="bg-surface-container-lowest py-32 scroll-mt-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 min-w-0">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl font-extrabold mb-6 text-on-surface">Experience the Precision.</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto font-body">Crafted for the sidelines. High-contrast displays ensure visibility even under the brightest arena lights.</p>
+</div>
+<div class="flex flex-col items-center gap-8 pb-12 w-full md:flex-row md:flex-nowrap md:items-stretch md:gap-6 lg:gap-8 md:scrollbar-hide md:snap-x md:snap-mandatory md:overflow-x-auto md:overflow-y-hidden md:scroll-px-4 lg:scroll-px-8 md:justify-center md:min-w-0 md:-mx-8 md:px-8">
+<div class="w-full max-w-[300px] aspect-[9/19] md:snap-center md:shrink-0 md:w-[min(300px,calc(100vw-2.5rem))] md:max-w-[calc(100vw-2rem)] bg-surface-container-highest rounded-[2.5rem] p-2 shadow-ambient-lg">
+<div class="w-full h-full min-h-0 bg-background rounded-[2.1rem] overflow-hidden shadow-ambient flex items-center justify-center">
+<img alt="PLAYYBOOK live scoring — Brooklyn Nets vs Rockets, stat buttons and box score" class="w-full h-full max-w-full object-contain object-center" src="assets/app-preview-live-scoring.png" width="513" height="1024" sizes="(max-width: 767px) 300px, min(300px, calc(100vw - 2.5rem))"/>
+</div>
+</div>
+<div class="w-full max-w-[300px] aspect-[9/19] md:snap-center md:shrink-0 md:w-[min(300px,calc(100vw-2.5rem))] md:max-w-[calc(100vw-2rem)] bg-surface-container-highest rounded-[2.5rem] p-2 shadow-ambient-lg">
+<div class="w-full h-full min-h-0 bg-background rounded-[2.1rem] overflow-hidden shadow-ambient flex items-center justify-center">
+<img alt="PLAYYBOOK whiteboard — full court view with player tools and saved plays" class="w-full h-full max-w-full object-contain object-center" src="assets/app-preview-whiteboard.png" width="474" height="1024" sizes="(max-width: 767px) 300px, min(300px, calc(100vw - 2.5rem))"/>
+</div>
+</div>
+<div class="w-full max-w-[300px] aspect-[9/19] md:snap-center md:shrink-0 md:w-[min(300px,calc(100vw-2.5rem))] md:max-w-[calc(100vw-2rem)] bg-surface-container-highest rounded-[2.5rem] p-2 shadow-ambient-lg">
+<div class="w-full h-full min-h-0 bg-background rounded-[2.1rem] overflow-hidden shadow-ambient flex items-center justify-center">
+<img alt="PLAYYBOOK Events — team schedule with practices and games" class="w-full h-full max-w-full object-contain object-center" src="assets/app-preview-events.png" width="677" height="1024" sizes="(max-width: 767px) 300px, min(300px, calc(100vw - 2.5rem))"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-it-works" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto scroll-mt-24">
+<h2 class="font-headline text-4xl font-extrabold text-center mb-20 text-on-surface">Three Steps to Victory.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 relative">
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-surface-container-highest rounded-full flex items-center justify-center font-headline text-3xl font-black text-primary mb-8 shadow-[0_0_48px_rgba(162,201,255,0.35)]">1</div>
+<h4 class="font-headline text-2xl font-bold mb-4 text-on-surface">Create Team</h4>
+<p class="text-on-surface-variant text-sm">Set your colors, upload your logo, and establish your team identity.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-surface-container-highest rounded-full flex items-center justify-center font-headline text-3xl font-black text-secondary mb-8 shadow-[0_0_48px_rgba(255,181,160,0.4)]">2</div>
+<h4 class="font-headline text-2xl font-bold mb-4 text-on-surface">Add Players</h4>
+<p class="text-on-surface-variant text-sm">Import your roster and assign positions. Track stats for everyone on the bench.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-surface-container-highest rounded-full flex items-center justify-center font-headline text-3xl font-black text-tertiary mb-8 shadow-[0_0_48px_rgba(255,185,84,0.35)]">3</div>
+<h4 class="font-headline text-2xl font-bold mb-4 text-on-surface">Start Scoring</h4>
+<p class="text-on-surface-variant text-sm">Hit the court and start tracking. The analytics engine handles the rest.</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-4 sm:px-8">
+<div class="max-w-5xl mx-auto bg-surface-container-low rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-ambient">
+<div class="absolute inset-0 bg-primary/5 blur-3xl rounded-full pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-tight text-on-surface">Ready to Run the Floor?</h2>
+<p class="text-on-surface-variant text-lg mb-12 max-w-xl mx-auto">Join over 10,000 coaches and players using Playybook to dominate their league.</p>
+<button type="button" class="bg-secondary text-on-secondary px-12 py-6 rounded-2xl font-headline font-black text-xl hover:scale-105 transition-transform active:scale-95 shadow-ambient-lg">
+                        Get Started Now
+                    </button>
+<p class="mt-8 text-sm font-body text-on-surface-variant/60">Free trial · No credit card required</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-lowest py-20 px-4 sm:px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-on-surface font-headline mb-6">Playybook</div>
+<p class="text-on-surface/50 text-sm leading-relaxed">
+                    The elite performance platform for basketball programs worldwide. Track. Coach. Dominate.
+                </p>
+</div>
+<div class="space-y-4">
+<h5 class="text-secondary font-headline font-bold text-sm uppercase tracking-widest">Product</h5>
+<nav class="flex flex-col gap-3">
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#features">Features</a>
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#app-preview">Insights</a>
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#features">Team Scoring</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h5 class="text-secondary font-headline font-bold text-sm uppercase tracking-widest">Company</h5>
+<nav class="flex flex-col gap-3">
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#">About Us</a>
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#">Careers</a>
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h5 class="text-secondary font-headline font-bold text-sm uppercase tracking-widest">Legal</h5>
+<nav class="flex flex-col gap-3">
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#">Terms of Service</a>
+<a class="text-on-surface/50 hover:text-primary transition-colors text-sm" href="#">Support</a>
+</nav>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-on-surface/30 font-body">© 2026 Playybook. Track. Coach. Dominate.</p>
+<div class="flex gap-6" aria-label="Social links">
+<span class="material-symbols-outlined text-on-surface/30 cursor-pointer hover:text-primary hover:opacity-100 transition-colors" role="img" aria-label="Community">groups</span>
+<span class="material-symbols-outlined text-on-surface/30 cursor-pointer hover:text-primary hover:opacity-100 transition-colors" role="img" aria-label="Share">share</span>
+<span class="material-symbols-outlined text-on-surface/30 cursor-pointer hover:text-primary hover:opacity-100 transition-colors" role="img" aria-label="Photos">photo_camera</span>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav');
+  var icon = document.getElementById('nav-toggle-icon');
+  if (!toggle || !panel || !icon) return;
+  toggle.addEventListener('click', function () {
+    var open = panel.classList.contains('hidden');
+    if (open) {
+      panel.classList.remove('hidden');
+      panel.classList.add('flex');
+    } else {
+      panel.classList.add('hidden');
+      panel.classList.remove('flex');
+    }
+    var isOpen = !panel.classList.contains('hidden');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    icon.textContent = isOpen ? 'close' : 'menu';
+  });
+})();
+</script>
+</body>
+</html>
